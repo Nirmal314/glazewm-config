@@ -26,7 +26,6 @@
 
         const providers = zebar.createProviderGroup({
             network: { type: 'network' },
-            media: { type: 'media' },
             glazewm: { type: 'glazewm' },
             cpu: { type: 'cpu' },
             date: { type: 'date', formatting: 'EEE d MMM t' },
@@ -144,19 +143,7 @@
                     </div>
 
                     <div className="center">
-                        {output.media?.currentSession ?
-                            (
-                                <>
-                                    {output.media.currentSession.title}
-                                </>
-                            )
-                            :
-                            (
-                                <>
-                                    {output.date?.formatted}
-                                </>
-                            )
-                        }
+                        {output.date?.formatted}
                     </div>
 
                     <div className="right">
